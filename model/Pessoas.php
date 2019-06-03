@@ -12,7 +12,7 @@ class Pessoas {
 
 public function getnome(){
 
-return $this-> $nome;
+return $this->nome;
 
 
 }
@@ -28,7 +28,7 @@ public function setnome($novoNome){
 
     public function getidade(){
 
-        return $this-> $idade;
+        return $this->idade;
         
         
         }
@@ -45,7 +45,7 @@ public function setnome($novoNome){
 
              public function getcpf(){
 
-                return $this->  $cpf;
+                return $this->cpf;
                 
                 
                 }

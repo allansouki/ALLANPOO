@@ -16,9 +16,9 @@ switch ($server) {
         case 'POST':
         
     $novaPessoa = new Pessoas();
-    $novaPessoa->setNome($_post['nome']);
-    $novaPessoa->setNome($_post['idade']);
-    $novaPessoa->setNome($_post['cpf']);
+    $novaPessoa->setNome($_POST['nome']);
+    $novaPessoa->setNome($_POST['idade']);
+    $novaPessoa->setNome($_POST['cpf']);
         
   $_REQUEST['pessoa'] = $novaPessoa;
  
@@ -31,7 +31,6 @@ switch ($server) {
 
 
 
-require_once "view/cadastro.php";
 
 
 
