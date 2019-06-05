@@ -8,6 +8,14 @@ class Pessoas {
    private $idade;
    private $cpf;
 
+   function __construct($nome,$idade,$cpf){
+
+    
+    $this->nome =$nome;
+    $this->idade =$idade;
+    $this->cpf =$cpf;
+
+   }
 
 
 public function getnome(){
@@ -59,9 +67,25 @@ public function setnome($novoNome){
 
 
 
-public function cadastrarPessoas($con){
+public function cadastrarPessoas($con,$pessoa){
+
+try{
+
+$query = $con->prepare("inset into usuarios(nome,idade,cpf) VALUES(?,?,?)");
+$query->execute([
+ 
+    $pessoa->getNome(),
+    $pessoa->getIdade(),
+    $pessoa->getCpf()
+]);
 
 
+return $query;
+} catch(PDOException $e){
+
+return false;
+
+}
 
     
 
